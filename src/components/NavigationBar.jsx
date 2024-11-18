@@ -1,4 +1,4 @@
-import { Button, Navbar, Typography } from "@material-tailwind/react"
+import { Button, Typography } from "@material-tailwind/react"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
@@ -17,7 +17,7 @@ const NavigationBar = () => {
   }
 
   return (
-    <Navbar fullWidth className="bg-[#030712] border-none shadow-md px-3">
+    <div className="bg-[#030712] w-full py-5 border-none shadow-md px-3">
       <div className="lg:px-16 mx-auto">
         <div className="flex justify-between items-center px-5">
           {/* Logo */}
@@ -27,16 +27,16 @@ const NavigationBar = () => {
           {/* nav */}
           <ul className="lg:flex gap-6 items-center font-semibold text-xl text-white hidden">
             <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-              <Link>Services</Link>
+              <Link to={"#services"}>Services</Link>
             </li>
             <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-              <Link>About</Link>
+              <Link to={"#about"}>About</Link>
             </li>
             <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-              <Link>Testimonials</Link>
+              <Link to={"#tesimonials"}>Testimonials</Link>
             </li>
             <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-              <Link>Contact Us</Link>
+              <Link to={"#contactus"}>Contact Us</Link>
             </li>
             <Button variant="filled" className="bg-[#33CCCC] shadow-none text-white rounded-md">Get Started</Button>
           </ul>
@@ -48,16 +48,16 @@ const NavigationBar = () => {
           <nav className="lg:hidden">
             <ul className="flex flex-col border-l border-[#33CCCC] space-y-10 bg-gray-900 text-gray-300 w-[300px] h-[950px] items-center pt-36 text-2xl font-semibold border-x-red-300 top-0 absolute right-0">
               <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-                <Link>Services</Link>
+                <Link to={"#services"}>Services</Link>
               </li>
               <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-                <Link>About</Link>
+                <Link to={"#about"}>About</Link>
               </li>
               <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-                <Link>Testimonials</Link>
+                <Link to={"#tesimonials"}>Testimonials</Link>
               </li>
               <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
-                <Link>Contact Us</Link>
+                <Link to={"#contactus"}>Contact Us</Link>
               </li>
               <Button variant="filled" className="bg-[#33CCCC] shadow-none text-white rounded-md">Get Started</Button>
               <X onClick={NavbarHandler} className="z-50 absolute top-0 right-10 border border-[#33CCCC] p-1 rounded-md"/>
@@ -65,7 +65,7 @@ const NavigationBar = () => {
           </nav>
         ):null
       }
-    </Navbar>
+    </div>
   )
 }
 
