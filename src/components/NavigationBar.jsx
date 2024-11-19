@@ -2,6 +2,7 @@ import { Button, Typography } from "@material-tailwind/react"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion";
 
 
 const NavigationBar = () => {
@@ -45,8 +46,8 @@ const NavigationBar = () => {
       </div>
       {
         open ? (
-          <nav className="lg:hidden">
-            <ul className="flex flex-col border-l border-[#33CCCC] space-y-10 bg-gray-900 text-gray-300 w-[300px] h-[950px] items-center pt-36 text-2xl font-semibold border-x-red-300 top-0 absolute right-0">
+          <nav className="lg:hidden ">
+            <ul className="z-50 flex flex-col border-l border-[#33CCCC] space-y-10 bg-black text-gray-300 w-[300px] h-[950px] items-center pt-36 text-2xl font-semibold border-x-red-300 top-0 absolute right-0">
               <li className="hover:text-[#33CCCC] cursor-pointer transition-all">
                 <Link to={"#services"}>Services</Link>
               </li>
