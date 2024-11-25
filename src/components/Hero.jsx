@@ -66,7 +66,7 @@ const Hero = () => {
                 >
                   <Button
                     variant="outlined" 
-                    className="rounded-md   bg-transparent text-white border-2 border-green-200 shadow-[0_0_50px_5px_rgba(51,_204,_204,_0.7)]">
+                    className="rounded-md bg-transparent text-white border-2 border-green-200 shadow-[0_0_50px_5px_rgba(51,_204,_204,_0.7)]">
                       Learn More
                   </Button>
                 </motion.div>
