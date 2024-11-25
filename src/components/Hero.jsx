@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className=" h-[600px] bg-cover bg-center relative z-10">
+    <div className=" h-[800px] bg-cover bg-center relative z-10">
       <img 
       src={bg} 
       alt="Background" 
@@ -17,47 +17,59 @@ const Hero = () => {
         <div className='relative max-w-7xl mx-auto'>
           <div className="flex lg:h-[650px] justify-center items-center lg:pt-0 pt-20">
             <div className="flex flex-col space-y-8 justify-center items-center text-center px-5 md:px-0">
-              <motion.Typography 
+              <motion.div 
+                  initial={{opacity:0, x:-100}}
+                  whileInView={{opacity:1, x:0}}
+                  transition={{duration:1, delay:0.5}}>
+                  <Typography 
+                    variant="h3" 
+                    className="lg:text-xl text-white">
+                      Digital Marketing Agency____
+                  </Typography>
+              </motion.div>
+              <motion.div 
                 initial={{opacity:0, x:-100}}
                 whileInView={{opacity:1, x:0}}
-                transition={{duration:1, delay:0.5}} 
-                variant="h3" 
-                className="lg:text-xl text-white">
-                  Digital Marketing Agency____
-              </motion.Typography>
-              <motion.Typography 
+                transition={{duration:1, delay:0.9}}
+              >
+                <Typography variant="h1"  className="lg:text-6xl text-white">
+                    Grow Your Business with Digital <br /> <span className="text-[#33CCCC]">Marketing solution!</span>
+                </Typography>
+              </motion.div>
+              <motion.div 
                 initial={{opacity:0, x:-100}}
                 whileInView={{opacity:1, x:0}}
-                transition={{duration:1, delay:0.9}} 
-                variant="h1" 
-                className="lg:text-6xl text-white">
-                  Grow Your Business with Digital <br /> <span className="text-[#33CCCC]">Marketing solution!</span>
-                </motion.Typography>
-              <motion.Typography
-                initial={{opacity:0, x:-100}}
-                whileInView={{opacity:1, x:0}}
-                transition={{duration:1, delay:0.5}}  
-                variant="paragraph" 
-                className="text-gray-200">
-                  Unlock the power of digital marketing to grow your business. Our expert strategies drive results and maximize your online potential.
-                </motion.Typography>
+                transition={{duration:1, delay:0.5}}
+              >
+                <Typography
+                  variant="paragraph" 
+                  className="text-gray-200">
+                    Unlock the power of digital marketing to grow your business. Our expert strategies drive results and maximize your online potential.
+                  </Typography>
+              </motion.div>
               <div className="flex gap-3 items-center">
-                <motion.Button
+                <motion.div
                   initial={{opacity:0, x:-100}}
                   whileInView={{opacity:1, x:0}}
-                  transition={{duration:1, delay:1.5}}  
-                  variant="filled" 
-                  className="bg-[#33CCCC] text-white rounded-md px-4 py-2 border-2 font-semibold flex items-center">
-                    Get Started <ChevronRight />
-                </motion.Button>
-                <motion.Button 
+                  transition={{duration:1, delay:1.5}} 
+                >
+                  <Button 
+                    variant="filled" 
+                    className="bg-[#33CCCC] text-white rounded-md  py-2 border-2 font-semibold flex items-center">
+                      Get Started <ChevronRight />
+                  </Button>
+                </motion.div>
+                <motion.div
                   initial={{opacity:0, x:-100}}
                   whileInView={{opacity:1, x:0}}
-                  transition={{duration:1, delay:1.2}} 
-                  variant="outlined" 
-                  className="rounded-md px-5 py-2 bg-transparent text-white border-2 border-green-200 shadow-[0_0_50px_5px_rgba(51,_204,_204,_0.7)]">
-                    Learn More
-                </motion.Button>
+                  transition={{duration:1, delay:1.2}}
+                >
+                  <Button
+                    variant="outlined" 
+                    className="rounded-md   bg-transparent text-white border-2 border-green-200 shadow-[0_0_50px_5px_rgba(51,_204,_204,_0.7)]">
+                      Learn More
+                  </Button>
+                </motion.div>
               </div>
             </div>
           </div>
