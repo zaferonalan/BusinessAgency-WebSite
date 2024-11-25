@@ -19,7 +19,11 @@ const NavigationBar = () => {
 
   return (
     <div className="bg-[#030712] w-full py-5 border-none shadow-md px-3">
-      <div className="lg:px-16 mx-auto">
+      <motion.div
+        initial={{opacity:0, y:-30}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:1, delay:0.2}} 
+        className="lg:px-16 mx-auto">
         <div className="flex justify-between items-center px-5">
           {/* Logo */}
           <div>
@@ -43,7 +47,7 @@ const NavigationBar = () => {
           </ul>
           <Menu onClick={NavbarHandler} className="lg:hidden text-white h-10 w-10"/>
         </div>
-      </div>
+      </motion.div>
       {
         open ? (
           <nav className="lg:hidden ">
