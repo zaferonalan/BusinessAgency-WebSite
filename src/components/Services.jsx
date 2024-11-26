@@ -6,7 +6,7 @@ import seo from "../assets/seo.gif";
 import analytics from "../assets/analytics.gif";
 import affiliate from "../assets/stakeholders.gif";
 import marketing from "../assets/marketing.gif";
-import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { motion } from "framer-motion"
 
 const Services = () => {
